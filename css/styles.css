@@ -388,3 +388,85 @@ html.js .reveal-img.in{clip-path:inset(0 0 0 0);opacity:1}
 @media (min-width:1200px){
   .band .band-inner{max-width:640px}
 }
+
+/* ===============================================================
+   SECTION ENRICHMENT — Work · Services · Studio
+   (extends existing patterns/tokens; no changes to other sections)
+================================================================ */
+
+/* ---- Work: project meta chips ---- */
+.proj-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.proj-chip{font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--text);
+  border:1px solid var(--line-2);border-radius:100px;padding:6px 12px;line-height:1;
+  background:rgba(13,13,15,.42);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.proj-chip b{color:var(--bronze-2);font-weight:600}
+
+/* ---- Work: text cards that fill the grid (quote + invite) ---- */
+.grid-card{position:relative;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--surface);padding:clamp(26px,3vw,34px);display:flex;flex-direction:column;
+  justify-content:space-between;min-height:300px;overflow:hidden}
+.grid-card .qmark{font-family:var(--serif);font-size:4.6rem;line-height:.6;color:var(--bronze);opacity:.55}
+.grid-card blockquote{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.6rem);line-height:1.32;
+  margin-top:6px;color:var(--text);font-weight:300}
+.grid-card .stars{color:var(--bronze);letter-spacing:.2em;font-size:.85rem;margin-top:20px}
+.grid-card .byline{display:flex;align-items:center;gap:13px;margin-top:16px}
+.grid-card .byline .av{width:42px;height:42px;border-radius:50%;background:var(--bronze-soft);
+  border:1px solid var(--line-2);display:grid;place-items:center;color:var(--bronze-2);
+  font-family:var(--serif);font-size:1.1rem;flex:none}
+.grid-card .byline .who .n{font-size:.9rem;color:var(--text)}
+.grid-card .byline .who .r{font-size:.7rem;color:var(--muted);letter-spacing:.09em;text-transform:uppercase;margin-top:2px}
+.grid-card.invite{background:linear-gradient(158deg,var(--surface-2),var(--bg-2));justify-content:flex-end}
+.grid-card.invite h3{font-size:1.9rem;margin-bottom:12px}
+.grid-card.invite p{color:var(--muted);font-size:.92rem;margin-bottom:24px;max-width:30ch}
+.grid-card .arrow-link{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:.14em;
+  text-transform:uppercase;font-weight:500;color:var(--bronze-2);transition:gap .3s var(--ease)}
+.grid-card .arrow-link svg{width:26px;height:12px}
+.grid-card.invite:hover .arrow-link{gap:16px}
+
+/* ---- Services: tag chips per card ---- */
+.svc-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}
+.svc-tag{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text);line-height:1;
+  padding:6px 11px;border-radius:100px;border:1px solid var(--line-2);
+  background:rgba(13,13,15,.42);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.svc.plain .svc-tag{background:rgba(255,255,255,.03)}
+
+/* ---- Services: assurance strip ---- */
+.svc-assurance{margin-top:clamp(34px,5vw,52px);display:grid;grid-template-columns:1fr;gap:16px}
+.assure{display:flex;gap:18px;align-items:flex-start;padding:26px;border:1px solid var(--line);
+  border-radius:var(--radius);background:var(--surface);transition:border-color .4s var(--ease),transform .4s var(--ease)}
+.assure:hover{border-color:var(--line-2);transform:translateY(-3px)}
+.assure .ic{width:46px;height:46px;flex:none;border-radius:50%;border:1px solid var(--line-2);
+  display:grid;place-items:center;color:var(--bronze)}
+.assure .ic svg{width:21px;height:21px}
+.assure h4{font-family:var(--sans);font-weight:600;font-size:1rem;letter-spacing:.01em;margin-bottom:7px}
+.assure p{color:var(--muted);font-size:.87rem;line-height:1.55}
+
+/* ---- Studio: left column composition ---- */
+.about .about-grid{align-items:start}
+.studio-visual{display:flex;flex-direction:column;gap:16px}
+.studio-visual .about-figure{margin:0}
+.studio-credentials{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden}
+.cred{background:var(--bg-2);padding:16px 20px;display:flex;align-items:center;gap:14px}
+.cred svg{width:19px;height:19px;color:var(--bronze);flex:none}
+.cred .ct{font-size:.9rem;color:var(--text)}
+.cred .cs{margin-left:auto;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+
+/* ---- Studio: principles + signature ---- */
+.studio-principles{margin-top:clamp(26px,3vw,34px);display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.principle{padding:22px;border:1px solid var(--line);border-radius:12px;background:var(--surface);
+  transition:border-color .4s var(--ease),transform .4s var(--ease)}
+.principle:hover{border-color:var(--line-2);transform:translateY(-3px)}
+.principle .pi{width:36px;height:36px;border-radius:9px;background:var(--bronze-soft);border:1px solid var(--line-2);
+  display:grid;place-items:center;color:var(--bronze-2);margin-bottom:15px}
+.principle .pi svg{width:18px;height:18px}
+.principle h4{font-family:var(--sans);font-weight:600;font-size:.95rem;margin-bottom:7px}
+.principle p{color:var(--muted);font-size:.85rem;line-height:1.55}
+.signature{margin-top:clamp(28px,3vw,34px);padding-top:26px;border-top:1px solid var(--line);
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.signature .sig-name{font-family:var(--serif);font-style:italic;font-size:1.7rem;color:var(--bronze-2);line-height:1}
+.signature .sig-meta{font-size:.78rem;color:var(--muted);letter-spacing:.08em;line-height:1.5}
+
+@media (min-width:900px){
+  .svc-assurance{grid-template-columns:repeat(3,1fr);gap:20px}
+}
